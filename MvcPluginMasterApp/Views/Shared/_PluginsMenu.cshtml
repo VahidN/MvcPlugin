@@ -1,0 +1,13 @@
+﻿@using MvcPluginMasterApp.IoCConfig
+@using MvcPluginMasterApp.PluginsBase
+@{
+    var plugins = SmObjectFactory.Container.GetAllInstances<IPlugin>().ToList();
+}
+
+@foreach (var plugin in plugins)
+{
+    var menuItem = plugin.GetMenuItem(this.Request.RequestContext);
+    <li>
+        <a href="@menuItem.Url">@menuItem.Name</a>
+    </li>
+}

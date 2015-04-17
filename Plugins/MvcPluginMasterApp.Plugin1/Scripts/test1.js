@@ -1,0 +1,1 @@
+﻿alert('Running the embedded script from Plugin1');

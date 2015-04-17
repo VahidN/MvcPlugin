@@ -1,0 +1,27 @@
+﻿@using MvcPluginMasterApp.Plugin2.DomainClasses
+@model IList<Article>
+@{
+    ViewBag.Title = "From Plugin 2";
+}
+@Styles.Render("~/Plugin2/Content")
+
+<h2>@ViewBag.Message</h2>
+
+<div class="row">
+    Embedded image:
+    <img src="@Url.Content("~/ArticlesArea/Images/clock.png")" alt="clock" />
+</div>
+
+<div class="row">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Title</li>
+        }
+    </ul>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/Plugin2/Scripts")
+}
