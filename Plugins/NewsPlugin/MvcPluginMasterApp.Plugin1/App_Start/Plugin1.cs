@@ -12,7 +12,7 @@ using MvcPluginMasterApp.Plugin1.Services;
 using MvcPluginMasterApp.Plugin1.Services.Contracts;
 using MvcPluginMasterApp.PluginsBase;
 
-namespace MvcPluginMasterApp.Plugin1
+namespace MvcPluginMasterApp.Plugin1.App_Start
 {
     public class Plugin1 : IPlugin
     {

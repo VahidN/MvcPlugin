@@ -14,9 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CE0CE6
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1", "Plugins\MvcPluginMasterApp.Plugin1\MvcPluginMasterApp.Plugin1.csproj", "{4A00AA2E-1E2E-4DFE-96A8-BF4E346F6A23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1", "Plugins\NewsPlugin\MvcPluginMasterApp.Plugin1\MvcPluginMasterApp.Plugin1.csproj", "{4A00AA2E-1E2E-4DFE-96A8-BF4E346F6A23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2", "Plugins\MvcPluginMasterApp.Plugin2\MvcPluginMasterApp.Plugin2.csproj", "{772D6FC2-AC4E-4F95-8559-120BE995A435}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2", "Plugins\ArticlesPlugin\MvcPluginMasterApp.Plugin2\MvcPluginMasterApp.Plugin2.csproj", "{772D6FC2-AC4E-4F95-8559-120BE995A435}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.IoCConfig", "MvcPluginMasterApp.IoCConfig\MvcPluginMasterApp.IoCConfig.csproj", "{0A0B0B85-5E17-4365-9011-CD0CCAF7DC2E}"
 EndProject
@@ -30,9 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin1", "Plugin1", "{CF15
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin2", "Plugin2", "{3C6FA6A8-249F-4093-8A94-D238D1A31C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1.Services", "Plugins\MvcPluginMasterApp.Plugin1.Services\MvcPluginMasterApp.Plugin1.Services.csproj", "{6B992E60-7178-4650-A930-72D8A07165AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1.Services", "Plugins\NewsPlugin\MvcPluginMasterApp.Plugin1.Services\MvcPluginMasterApp.Plugin1.Services.csproj", "{6B992E60-7178-4650-A930-72D8A07165AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2.Services", "Plugins\MvcPluginMasterApp.Plugin2.Services\MvcPluginMasterApp.Plugin2.Services.csproj", "{B2F2E110-59D8-4828-B2D0-9B6F267529D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2.Services", "Plugins\ArticlesPlugin\MvcPluginMasterApp.Plugin2.Services\MvcPluginMasterApp.Plugin2.Services.csproj", "{B2F2E110-59D8-4828-B2D0-9B6F267529D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFBootstrapper", "EFBootstrapper", "{EB063DD0-13EA-44FF-9A23-6B28869F1E37}"
 EndProject
@@ -40,9 +40,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.DataLaye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.DomainClasses", "MvcPluginMasterApp.DomainClasses\MvcPluginMasterApp.DomainClasses.csproj", "{855860C4-EE95-4242-B6AE-3A04E26629A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1.DomainClasses", "Plugins\MvcPluginMasterApp.Plugin1.DomainClasses\MvcPluginMasterApp.Plugin1.DomainClasses.csproj", "{5E3600A2-88D1-4B88-B7C9-D50286C5B49C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin1.DomainClasses", "Plugins\NewsPlugin\MvcPluginMasterApp.Plugin1.DomainClasses\MvcPluginMasterApp.Plugin1.DomainClasses.csproj", "{5E3600A2-88D1-4B88-B7C9-D50286C5B49C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2.DomainClasses", "Plugins\MvcPluginMasterApp.Plugin2.DomainClasses\MvcPluginMasterApp.Plugin2.DomainClasses.csproj", "{0D65EC8D-1950-40AC-A154-E2CD4CBC6141}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPluginMasterApp.Plugin2.DomainClasses", "Plugins\ArticlesPlugin\MvcPluginMasterApp.Plugin2.DomainClasses\MvcPluginMasterApp.Plugin2.DomainClasses.csproj", "{0D65EC8D-1950-40AC-A154-E2CD4CBC6141}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78420449-5438-4C1E-9DE6-4F8AB133B4E7}"
 	ProjectSection(SolutionItems) = preProject

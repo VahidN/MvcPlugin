@@ -1,12 +1,12 @@
 using System.Web;
 using System.Web.Mvc;
 using System.Web.WebPages;
-using MvcPluginMasterApp.Plugin1;
+using MvcPluginMasterApp.Plugin1.App_Start;
 using RazorGenerator.Mvc;
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(RazorGeneratorMvcStart), "Start")]
 
-namespace MvcPluginMasterApp.Plugin1 {
+namespace MvcPluginMasterApp.Plugin1.App_Start {
     public static class RazorGeneratorMvcStart {
         public static void Start() {
             var engine = new PrecompiledMvcEngine(typeof(RazorGeneratorMvcStart).Assembly) {
