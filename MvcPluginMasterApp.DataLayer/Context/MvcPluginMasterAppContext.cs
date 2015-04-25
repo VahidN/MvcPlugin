@@ -60,6 +60,7 @@ namespace MvcPluginMasterApp.DataLayer.Context
 
             foreach (var assembly in assemblies)
             {
+                if (_configurationsAssemblies.Contains(assembly)) continue;
                 _configurationsAssemblies.Add(assembly);
             }
         }

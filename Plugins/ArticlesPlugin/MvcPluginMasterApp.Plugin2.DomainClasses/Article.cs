@@ -1,4 +1,6 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
+using CommonEntities;
 
 namespace MvcPluginMasterApp.Plugin2.DomainClasses
 {
@@ -9,6 +11,11 @@ namespace MvcPluginMasterApp.Plugin2.DomainClasses
         public string Title { set; get; }
 
         public string Body { set; get; }
+
+
+        [ForeignKey("UserId")]
+        public virtual User User { set; get; }
+        public int UserId { set; get; }
     }
 
     public class ArticlesConfig : EntityTypeConfiguration<Article>

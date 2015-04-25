@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using CommonEntities;
 using MvcPluginMasterApp.Common.WebToolkit;
 using MvcPluginMasterApp.Plugin2.DomainClasses;
 using MvcPluginMasterApp.Plugin2.Services;
@@ -20,8 +21,12 @@ namespace MvcPluginMasterApp.Plugin2
         {
             return new EfBootstrapper
             {
-                DomainEntities = new[] { typeof(Article) },
-                ConfigurationsAssemblies = new[] { typeof(ArticlesConfig).Assembly },
+                DomainEntities = new[] { typeof(Article), typeof(User) },
+                ConfigurationsAssemblies = new[]
+                {
+                    typeof(ArticlesConfig).Assembly,
+                    typeof(User).Assembly
+                },
                 DatabaseSeeder = uow =>
                 {
                     var news = uow.Set<Article>();
@@ -30,16 +35,21 @@ namespace MvcPluginMasterApp.Plugin2
                         return;
                     }
 
+                    var users = uow.Set<User>();
+                    var user1 = users.Add(new User { Name = "User Plugin 2" });
+
                     news.Add(new Article
                     {
                         Title = "Article 1",
-                        Body = "data 1 data 1 data 1 ...."
+                        Body = "data 1 data 1 data 1 ....",
+                        User = user1
                     });
 
                     news.Add(new Article
                     {
                         Title = "Article 2",
-                        Body = "data 2 data 2 data 2 ...."
+                        Body = "data 2 data 2 data 2 ....",
+                        User = user1
                     });
                 }
             };

@@ -211,6 +211,10 @@
       <Project>{9c48d0fd-2c49-4475-8b92-53d5e0251305}</Project>
       <Name>MvcPluginMasterApp.PluginsBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\CommonEntities\CommonEntities\CommonEntities.csproj">
+      <Project>{193814d6-ebed-4f59-b716-79515e373dc1}</Project>
+      <Name>CommonEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcPluginMasterApp.Plugin2.DomainClasses\MvcPluginMasterApp.Plugin2.DomainClasses.csproj">
       <Project>{0d65ec8d-1950-40ac-a154-e2cd4cbc6141}</Project>
       <Name>MvcPluginMasterApp.Plugin2.DomainClasses</Name>
@@ -256,7 +260,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>Copy "$(ProjectDir)$(OutDir)$(TargetName).*" "$(SolutionDir)MvcPluginMasterApp\bin\"</PostBuildEvent>
+    <PostBuildEvent>Copy "$(ProjectDir)$(OutDir)*.*" "$(SolutionDir)MvcPluginMasterApp\bin\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
