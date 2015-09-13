@@ -1,0 +1,33 @@
+﻿@using MvcPluginMasterApp.Plugin1.DomainClasses
+@model News
+@{
+    ViewBag.Title = "Show Resources";
+}
+@Styles.Render("~/Plugin1/Content")
+
+<h2>@ViewBag.Message</h2>
+
+
+<div class="row">
+    <fieldset>
+        <legend>News Info (@@Home_Index_cshtml.Title)</legend>
+        CurrentCulture: @System.Threading.Thread.CurrentThread.CurrentCulture.ToString()
+        <div class="display-label">@MvcPluginMasterApp.Plugin1.Resources.Home_Index_cshtml.Title</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+    </fieldset>
+</div>
+
+<div class="row">
+    <fieldset>
+        <legend>News Info (@@Html.DisplayForModel)</legend>
+        @Html.DisplayForModel()
+    </fieldset>
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/Plugin1/Scripts")
+}

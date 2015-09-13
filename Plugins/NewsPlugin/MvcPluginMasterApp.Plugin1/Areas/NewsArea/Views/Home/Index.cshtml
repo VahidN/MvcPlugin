@@ -9,17 +9,19 @@
 
 <div class="row">
     Embedded image:
-    <img src="@Url.Content("~/NewsArea/Images/chart.png")" alt="clock"/>
+    <img src="@Url.Content("~/NewsArea/Images/chart.png")" alt="clock" />
 </div>
 
 <div class="row">
     <ul>
         @foreach (var item in Model)
         {
-            <li>@item.Title</li>
+            <li>@MvcPluginMasterApp.Plugin1.Resources.Home_Index_cshtml.Title : @item.Title</li>
         }
     </ul>
 </div>
+
+@Html.ActionLink("Show Resources", "ShowResources", "Home", new { area = "NewsArea" }, null)
 
 @section scripts
 {

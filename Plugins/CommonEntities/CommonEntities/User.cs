@@ -9,6 +9,7 @@ namespace CommonEntities
 
         [Index(IsUnique = true)]
         [MaxLength(450)]
+        [Required]
         public string Name { set; get; }
     }
 }

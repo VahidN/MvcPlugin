@@ -62,6 +62,10 @@
       <Project>{193814d6-ebed-4f59-b716-79515e373dc1}</Project>
       <Name>CommonEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MvcPluginMasterApp.Plugin1.Resources\MvcPluginMasterApp.Plugin1.Resources.csproj">
+      <Project>{fe274386-fa07-4e7a-b782-5163f6143800}</Project>
+      <Name>MvcPluginMasterApp.Plugin1.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -67,12 +67,12 @@
       <HintPath>..\..\..\packages\RazorGenerator.Mvc.2.1.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="StructureMap, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
+    <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="StructureMap.Net4, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.Net4.dll</HintPath>
+    <Reference Include="StructureMap.Net4, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.Net4.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -161,6 +161,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Areas\NewsArea\Views\Home\ShowResources.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowResources.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Areas\NewsArea\Views\_ViewStart.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,10 +224,20 @@
       <Project>{5e3600a2-88d1-4b88-b7c9-d50286c5b49c}</Project>
       <Name>MvcPluginMasterApp.Plugin1.DomainClasses</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MvcPluginMasterApp.Plugin1.Resources\MvcPluginMasterApp.Plugin1.Resources.csproj">
+      <Project>{fe274386-fa07-4e7a-b782-5163f6143800}</Project>
+      <Name>MvcPluginMasterApp.Plugin1.Resources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcPluginMasterApp.Plugin1.Services\MvcPluginMasterApp.Plugin1.Services.csproj">
       <Project>{6b992e60-7178-4650-a930-72d8a07165ae}</Project>
       <Name>MvcPluginMasterApp.Plugin1.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\NewsArea\Views\Home\ShowResources.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ShowResources.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -260,7 +275,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>Copy "$(ProjectDir)$(OutDir)*.*" "$(SolutionDir)MvcPluginMasterApp\bin\"</PostBuildEvent>
+    <PostBuildEvent>XCopy "$(ProjectDir)$(OutDir)*" "$(SolutionDir)MvcPluginMasterApp\bin\" /S /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

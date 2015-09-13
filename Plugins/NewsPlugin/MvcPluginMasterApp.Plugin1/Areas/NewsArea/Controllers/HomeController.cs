@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using MvcPluginMasterApp.Plugin1.DomainClasses;
 using MvcPluginMasterApp.Plugin1.Services.Contracts;
 
 namespace MvcPluginMasterApp.Plugin1.Areas.NewsArea.Controllers
@@ -16,9 +17,19 @@ namespace MvcPluginMasterApp.Plugin1.Areas.NewsArea.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = "From Plugin1: " + _configService.Key1;
+            ViewBag.Message = string.Format("From Plugin1: {0}", _configService.Key1);
             var newsList = _newsService.GetAllNews();
             return View(model: newsList);
+        }
+
+        public ActionResult ShowResources()
+        {
+            /*
+              <system.web>
+                <globalization culture="fa-IR" uiCulture="fa-IR" />
+             */
+            var model = new News {Title = "Title 1", Body = "Body 1"};
+            return View(model);
         }
     }
 }
