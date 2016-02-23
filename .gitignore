@@ -193,3 +193,4 @@ ModelManifest.xml
 /Plugins/NewsPlugin/MvcPluginMasterApp.Plugin1.DomainClasses/obj
 /Plugins/NewsPlugin/MvcPluginMasterApp.Plugin1.Services/obj
 /Plugins/NewsPlugin/MvcPluginMasterApp.Plugin1.Services/bin
+*.scgdat
